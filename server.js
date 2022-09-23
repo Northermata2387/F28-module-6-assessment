@@ -95,7 +95,7 @@ app.post('/api/duel', (req, res) => {
 
 app.get('/api/player', (req, res) => {
     try {
-        rollbar.info('User gets updated palyer record')
+        rollbar.info('User gets updated player record')
         res.status(200).send(playerRecord)
     } catch (error) {
         console.log('ERROR GETTING PLAYER STATS', error)
