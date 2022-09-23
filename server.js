@@ -17,19 +17,6 @@ var rollbar = new Rollbar({
 // record a generic message and send it to Rollbar
 rollbar.log('Hello world!')
 
-//Middleware to serve the html file
-app.use('/', express.static(path.join(__dirname, '/public/index.html')))
-
-//Endpoints to serve the js file
-app.get('/js', (req, res) => {
-    res.sendFile(path.join(__dirname, `/public/index.js`))
-  })
-
-//Endpoints to serve the css file
-app.get('/styles', (req, res) => {
-    res.sendFile(path.join(__dirname, `/public/index.css`))
-  })
-
 //Middleware to serve files from the public folder
 app.use(express.static(path.join(__dirname, '/public')))
 
